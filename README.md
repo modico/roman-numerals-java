@@ -29,6 +29,34 @@ For a full description of how it works, take a look at [this useful reference we
 There is no need to be able to convert numbers larger than about 3000. (The Romans themselves didn't tend to go any higher)
 
 Note that you can't write numerals like "IM" for 999. Wikipedia says: Modern Roman numerals ... are written by expressing each digit separately starting with the left most digit and skipping any digit with a value of zero. To see this in practice, consider the ... example of 1990. In Roman numerals 1990 is rendered: 1000=M, 900=CM, 90=XC; resulting in MCMXC. 2008 is written as 2000=MM, 8=VIII; or MMVIII. 
+
+### Algorithm
+`````
+1	I	1
+2	II	1+1
+3	III	1+1+1
+4	IV	4
+5	V	5
+6	VI	5+1
+7	VII	5+1+1
+8	VIII	5+1+1+1
+9	IX	9
+10	X	10
+11	XI	10+1
+12	XII	10+1+1
+13	XIII	10+1+1+1
+14	XIV	9+5
+15	XV	10+5
+16	XVI	10+5+1
+17	XVII	10+5+1+1
+18	XVIII	10+5+1+1+1
+19	XIX	10 + 9
+...
+30      XXX     10 + 10 + 10
+
+`````
+
+
 ### Part II
 
 Write a function to convert in the other direction, ie numeral to digit
