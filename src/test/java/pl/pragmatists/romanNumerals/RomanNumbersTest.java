@@ -31,6 +31,103 @@ public class RomanNumbersTest {
 
     private class RomanNumbers {
 
+        public String parse3(Integer number) {
+            String result = "";
+
+            if (number == 1) {
+                return "I";
+            }
+            if (number == 2) {
+                return "II";
+            }
+            if (number == 3) {
+                return "III";
+            }
+
+            return result;
+        }
+
+        public String parse3_loop(Integer number) {
+            String result = "";
+
+            while (number >= 1) {
+                number -= 1;
+                result += "I";
+            }
+
+            return result;
+        }
+
+        public String parse4(Integer number) {
+            String result = "";
+
+            if (number == 4) {
+                result = "IV";
+            } else {
+                while (number >= 1) {
+                    number -= 1;
+                    result += "I";
+                }
+            }
+
+
+            return result;
+        }
+
+        public String parse4_refactor(Integer number) {
+            String result = "";
+
+            if (number == 4) {
+                number -= 4;
+                result += "IV";
+            }
+
+            while (number >= 1) {
+                number -= 1;
+                result += "I";
+            }
+
+            return result;
+        }
+
+        public String parse4_refactor2(Integer number) {
+            String result = "";
+
+            while (number >= 4) {
+                number -= 4;
+                result += "IV";
+            }
+
+            while (number >= 1) {
+                number -= 1;
+                result += "I";
+            }
+
+            return result;
+        }
+
+        public String parse5_6_7_8(Integer number) {
+            String result = "";
+
+            while (number >= 5) {
+                number -= 5;
+                result += "V";
+            }
+
+            while (number >= 4) {
+                number -= 4;
+                result += "IV";
+            }
+
+            while (number >= 1) {
+                number -= 1;
+                result += "I";
+            }
+
+            return result;
+        }
+
+
         Map<String, Integer> map = new LinkedHashMap<String, Integer>() {{
             put("X", 10);
             put("IX", 9);
